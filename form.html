@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color:beige;
+        }
+
+        #f1 {
+            background-color:burlywood;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            border: 10PX double rgb(10, 10, 10);
+            height: 500px;
+            width: 600px;
+            margin-left: 500px;
+            margin-top: 100px;
+            margin-bottom: auto;
+            margin-right: auto;
+
+        }
+    </style>
+    <title>LOGIN PAGE</title>
+</head>
+
+<body>
+    <form id="f1" onsubmit=" return valid()">
+        <h1>login page</h1>
+        <form>
+            <label>USER-NAME:</label>
+            <input type="text" size="30" id="username"><br><br>
+            <label>PASSWORD:</label>
+            <input type="password" size="30" id="Password"><br><br>
+            <label> CONFORM PASSWORD:</label>
+            <input type="password" size="30" id="compass"><br><br>
+            <input type="submit" size="30" >
+            <input type="reset" size="30">
+        </form>
+        <script>
+            function  valid() {
+                let user = document.getElementById('username').value;
+                let pass = document.getElementById('Password').value;
+                let cmpass = document.getElementById('compass').value;
+                if (user === "") {
+                    alert("please enter the name");
+                    return false;
+                }
+                else if (pass === "") {
+                    alert("please enter the name");
+                    return false;
+                }
+                if (pass.length<6||pass.length>10) {
+                    alert("password mustbe between 6 to 10");
+                    return false;
+
+                }
+                if (pass!=cmpass) {
+                    alert("please enter same password");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+</body>
+
+</html>
