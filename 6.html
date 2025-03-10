@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: rgb(146, 52, 229);
+            font-style: italic;
+            font-size: xx-large;
+            margin-top: 400px;
+            margin-bottom: 400px;
+            margin-left: 650px;
+        }
+    </style>
+    <title>current day date and time</title>
+</head>
+
+<body>
+    <script>
+        let a = new Date();
+        let op = {
+            weekday: 'long'
+        };
+        document.write("today is:" + a.toLocaleDateString('en-us', op) + "<br>");
+        document.write("Date:" + a.toLocaleDateString() + "<br>");
+        document.write("time:" + a.toLocaleTimeString());
+
+    </script>
+</body>
+
+</html>
